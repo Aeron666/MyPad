@@ -10,11 +10,12 @@ package mypad;
  * @author Admin
  */
 import javax.swing.*;
+import java.awt.event.*;
 /**
  *
  * @author Admin
  */
-public class Calc {
+    public class Calc {
     public static void main(String []args){
         JFrame f=new JFrame();
         f.setSize(400,500);
