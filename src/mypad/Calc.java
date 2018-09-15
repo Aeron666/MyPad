@@ -45,11 +45,23 @@ public class Calc {
         b2.setBounds(289, 72, 90, 30);
         f.add(b2);
         JCheckBox cb1= new JCheckBox("blah");
-        cb1.setBounds(100,135,50,30);
+        cb1.setBounds(5,135,50,30);
         f.add(cb1);
         JCheckBox cb2= new JCheckBox("hola",true);
-        cb2.setBounds(200,135,50,30);
+        cb2.setBounds(60,135,50,30);
         f.add(cb2);
+        JRadioButton r1= new JRadioButton("User");
+        r1.setBounds(150,135,80,30);
+        JRadioButton r2=new JRadioButton("Guest");
+        r2.setBounds(240,135,80,30);
+        ButtonGroup bj1= new ButtonGroup();
+        bj1.add(r1);//r1 is add to the group1
+        bj1.add(r2);// r2 is added to the group1
+        ButtonGroup bj2=new ButtonGroup();
+        bj2.add(cb1);//cb1 is added to the group2
+        bj2.add(cb2);//cb2 is added to the group2
+        f.add(r1);//r1 is added to the frame
+        f.add(r2);//r2 is added to the frame
         f.setLayout(null);//layout is set to null
         f.setVisible(true);
     }
