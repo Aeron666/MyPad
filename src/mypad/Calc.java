@@ -18,7 +18,7 @@ import java.awt.event.*;
     public class Calc {
     public static void main(String []args){
         JFrame f=new JFrame();
-        f.setSize(400,500);
+        
         JTextField t1=new JTextField(20);
         t1.setBounds(05,32,280,60);
         f.add(t1);//text field is added
@@ -63,6 +63,17 @@ import java.awt.event.*;
         bj2.add(cb2);//cb2 is added to the group2
         f.add(r1);//r1 is added to the frame
         f.add(r2);//r2 is added to the frame
+        String cxOption[]={"otha","gotha"};
+        JComboBox cx= new JComboBox(cxOption);
+        cx.setBounds(320, 135, 60, 30);
+        f.add(cx);
+        String dataRow[][]={{"001","User","otha",},{"002","Guest","gotha"}};
+        String column[]={"ID","Name","Contour"};
+        JTable jt=new JTable(dataRow,column);
+        jt.setBounds(05,165,325,50);
+        //JScrollPane sp= new JScrollPane(jt);
+        f.add(jt);
+        f.setSize(400,500);
         f.setLayout(null);//layout is set to null
         f.setVisible(true);
     }
